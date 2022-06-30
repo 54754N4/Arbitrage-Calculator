@@ -3,7 +3,8 @@
 Checks if two sources predictions conflict with each other and allow the possiblity of unbiased arbitrage. 
 
 ```java
-/* In this example we suppose two different sites propose different payouts based on their predictions for if Federer or Nadal wins */
+/* In this example we suppose two different sites propose different payouts 
+ * based on their predictions for if Federer or Nadal wins */
 Arbitrage a = new Arbitrage.Builder()
 		.setHeaders("Federer", "Nadal")
 		.addSource("Site 1", 1.30, 3.93)
@@ -11,7 +12,8 @@ Arbitrage a = new Arbitrage.Builder()
 		.build();
 System.out.println(a);
 
-/* And calculate how much we need to bet for each to allow unbiased arbitrage (if the total capital we want to bet is 100) */
+/* And calculate how much we need to bet for each to allow unbiased 
+ * arbitrage (if the total capital we want to bet is 100) */
 System.out.println(">>Profits");
 System.out.println(a.bet(100));
 ```
